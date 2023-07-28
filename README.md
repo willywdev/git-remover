@@ -6,7 +6,7 @@ This Python script will remove all `.git` folders inside the directories of the 
 
 ## 🔍 Description
 
-The "Git Remover Script" is a command-line tool written in Python. It helps you remove all the `.git` folders found inside the visible directories of the current working directory. This script allows you to confirm your action before proceeding and provides visual feedback during the process.
+Git Warlock is a command-line tool written in Python. It helps you remove all the `.git` folders found inside the visible directories of the current working directory. This script allows you to confirm your action before proceeding and provides visual feedback during the process.
 
 ## 🛠️ Dependencies
 
@@ -65,7 +65,7 @@ If you want to build Git Warlock from source or make modifications to the script
 3. Create a virtual environment (optional but recommended):
 
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    ```
 
 4. Activate the virtual environment:
@@ -85,13 +85,13 @@ If you want to build Git Warlock from source or make modifications to the script
 5. Install the required dependencies using `pip`:
 
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 6. Now you can run the script:
 
    ```bash
-   python git-warlock.py
+   python3 git-warlock.py
    ```
 
 Happy building and customizing your Git Warlock! If you have any questions or issues, feel free to open an [issue](https://github.com/your-username/git-warlock/issues) on the repository.
