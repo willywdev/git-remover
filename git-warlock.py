@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 from rich import print as rprint
 
 # * Functions for Text Styling (rich)
@@ -44,7 +45,7 @@ def print_visible_folders():
     else:
         print("No visible folders found in the current directory.")
 
-def delete_git_folders(): 
+def delete_git_folders():
     folders = [item for item in os.listdir(working_path) if os.path.isdir(os.path.join(working_path, item))]
     visible_folders = [folder for folder in folders if not folder.startswith(".")]
 
@@ -54,7 +55,7 @@ def delete_git_folders():
         if os.path.exists(git_folder_path) and os.path.isdir(git_folder_path):
             deleted_folders.append(git_folder_path)
             try:
-                os.rmdir(git_folder_path)
+                shutil.rmtree(git_folder_path)  # Use shutil.rmtree() to remove non-empty directories.
             except OSError as e:
                 rprint(f"[bold red]Error:[/bold red] Could not delete .git folder in {folder} ({e})")
     return deleted_folders
