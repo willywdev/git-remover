@@ -2,6 +2,10 @@
 
 This Python script will remove all `.git` folders inside the directories of the current working directory.
 
+## Currently working on
+
+- Implementing user input path
+
 ## Description
 
 The "Git Remover Script" is a command-line tool written in Python. It helps you remove all the `.git` folders found inside the visible directories of the current working directory. This script allows you to confirm your action before proceeding and provides visual feedback during the process.
