@@ -5,6 +5,7 @@ This Python script will remove all `.git` folders inside the directories of the 
 ## Currently working on
 
 - Implementing user input path
+- Creating a Python Package
 
 ## Description
 
