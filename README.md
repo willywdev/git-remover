@@ -40,7 +40,7 @@ This script will permanently delete `.git` folders, which will remove Git versio
 
 ## ✒️ Author
 
-Git Warlock was forged by willywdev 🔮. For more of my projects, visit my [GitHub profile](https://github.com/willywdev).
+Git Warlock 🔮 was forged by willywdev. For more of my projects, visit my [GitHub profile](https://github.com/willywdev).
 
 ## 📜 License
 
