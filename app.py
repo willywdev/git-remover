@@ -15,6 +15,12 @@ def make_text_bold(text):
 def make_text_cyan_on_dark_gray_background(text):
     return f"[bold cyan on dark_gray]{text}[/bold cyan on dark_gray]"
 
+def make_text_green_and_bold(text):
+    return f"[bold green]{text}[/bold green]"
+
+def make_text_red_and_bold(text):
+    return f"[bold red]{text}[/bold red]"
+
 # * Functions for Interactivity
 def get_user_confirmation(prompt):
     while True:
@@ -37,6 +43,22 @@ def print_visible_folders():
             rprint("[bold green]" + folder + "[/bold green]")
     else:
         print("No visible folders found in the current directory.")
+
+def delete_git_folders(): 
+    folders = [item for item in os.listdir(working_path) if os.path.isdir(os.path.join(working_path, item))]
+    visible_folders = [folder for folder in folders if not folder.startswith(".")]
+
+    deleted_folders = []
+    for folder in visible_folders:
+        git_folder_path = os.path.join(working_path, folder, ".git")
+        if os.path.exists(git_folder_path) and os.path.isdir(git_folder_path):
+            deleted_folders.append(git_folder_path)
+            try:
+                os.rmdir(git_folder_path)
+            except OSError as e:
+                rprint(f"[bold red]Error:[/bold red] Could not delete .git folder in {folder} ({e})")
+    return deleted_folders
+
 
 warning = "Read carefully!"
 message = "This Script will remove all .git Folders in All Folders in this directory."
@@ -62,6 +84,13 @@ print_visible_folders()
 proceed = get_user_confirmation("\nWould you like to proceed?\n")
 if proceed:
     print("coming soon")
+    deleted_folders = delete_git_folders()
+    if deleted_folders: 
+        rprint(make_text_green_and_bold("\nThe following .git folders have been deleted:"))
+        for folder in deleted_folders:
+            print(folder)
+    else:
+        rprint(make_text_red_and_bold("\nNo .git folders were found."))
 else:
     print("\nBye.\n")
     sys.exit()
