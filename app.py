@@ -59,7 +59,7 @@ def delete_git_folders():
                 rprint(f"[bold red]Error:[/bold red] Could not delete .git folder in {folder} ({e})")
     return deleted_folders
 
-
+# * Program Start
 warning = "Read carefully!"
 message = "This Script will remove all .git Folders in All Folders in this directory."
 confirmation = "This cannot be restored. Are you sure about that?"
