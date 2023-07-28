@@ -18,7 +18,8 @@ def make_text_cyan_on_dark_gray_background(text):
 # * Functions for Interactivity
 def get_user_confirmation(prompt):
     while True:
-        user_input = input(prompt + "\n(yes/no): ").strip().lower()
+        rprint(make_text_yellow(prompt))
+        user_input = input("\n(yes/no): ").strip().lower()
         if user_input in ["yes", "y"]:
             return True
         elif user_input in ["no", "n"]:
@@ -32,9 +33,8 @@ def print_visible_folders():
     visible_folders = [folder for folder in folders if not folder.startswith(".")]
     
     if visible_folders:
-        print("Visible folders:")
         for folder in visible_folders:
-            print(folder)
+            rprint("[bold green]" + folder + "[/bold green]")
     else:
         print("No visible folders found in the current directory.")
 
@@ -59,3 +59,9 @@ else:
     sys.exit()
 
 print_visible_folders()
+proceed = get_user_confirmation("\nWould you like to proceed?\n")
+if proceed:
+    print("coming soon")
+else:
+    print("\nBye.\n")
+    sys.exit()
