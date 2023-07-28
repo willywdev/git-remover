@@ -1,6 +1,5 @@
 .DS_Store
 .vscode
-pyoxidizer.toml
 build
 dist
-git-warlock.spec
+git_warlock.egg-info
