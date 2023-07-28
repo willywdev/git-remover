@@ -1,4 +1,4 @@
-# Git Remover Script
+# Git Warlock 🔮 - Git Remover Script
 
 This Python script will remove all `.git` folders inside the directories of the current working directory.
 
