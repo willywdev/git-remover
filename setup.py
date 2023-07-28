@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='git-warlock',
-    version='1.0.0',
+    version='1.0.1',
     description='A script to remove .git folders in all subdirectories',
     author='willywdev',
     packages=find_packages(),
