@@ -36,7 +36,7 @@ Git Warlock will then prompt you for confirmation to proceed with the removal of
 
 ## ⚠️ Important Note
 
-This script will permanently delete `.git` folders, which will remove Git version control from those directories. Use it with caution and ensure you have a backup or are absolutely sure before proceeding.
+❗️ This script will permanently delete `.git` folders, which will remove Git version control from those directories. ❗️ Use it with caution and ensure you have a backup or are absolutely sure before proceeding.
 
 ## ✒️ Author
 
