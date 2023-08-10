@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-This Python script will remove all `.git` folders inside the directories of the current working directory.
+This Python script will remove all `.git folders` inside the folders of the current working directory.
 
 ## 🔍 Description
 
